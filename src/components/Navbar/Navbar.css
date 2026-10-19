@@ -1,0 +1,242 @@
+/* ==========================================================
+   ECOLIM S.A.C. - Navbar Styles
+   ========================================================== */
+
+.navbar-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--surface-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(226, 232, 227, 0.7);
+  transition: all var(--transition-normal);
+}
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(14, 112, 64, 0.08);
+  border-bottom-color: rgba(16, 185, 129, 0.2);
+}
+
+.navbar-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+/* Logotipo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  cursor: pointer;
+  user-select: none;
+  transition: transform var(--transition-fast);
+}
+
+.navbar-logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo-icono {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.35);
+}
+
+.logo-icono svg {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-titulo {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.logo-sac {
+  color: var(--primary-light);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.logo-subtitulo {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Enlaces Desktop */
+.navbar-enlaces {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.enlace-nav {
+  position: relative;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.enlace-nav:hover {
+  color: var(--primary);
+  background-color: rgba(16, 185, 129, 0.08);
+}
+
+.enlace-nav.activo {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.indicador-activo {
+  position: absolute;
+  bottom: 0px;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background: var(--primary-light);
+  border-radius: var(--radius-full);
+}
+
+/* Botón de acción Desktop */
+.navbar-accion {
+  display: flex;
+  align-items: center;
+}
+
+.btn-nav-cta {
+  padding: 0.65rem 1.35rem;
+  font-size: 0.88rem;
+}
+
+/* Botón Hamburguesa */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburguesa .linea {
+  display: block;
+  height: 2.5px;
+  width: 100%;
+  background-color: var(--primary-dark);
+  border-radius: 2px;
+  transition: all var(--transition-normal);
+}
+
+.hamburguesa.abierto .linea:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.hamburguesa.abierto .linea:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburguesa.abierto .linea:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
+}
+
+/* Menú Móvil */
+.menu-movil {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 2px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  padding: 1.5rem 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+}
+
+.menu-movil.activo {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-movil-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 1.5rem;
+}
+
+.menu-movil-badge {
+  margin-bottom: 0.5rem;
+}
+
+.enlace-movil {
+  width: 100%;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast);
+}
+
+.enlace-movil:hover,
+.enlace-movil.activo {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--primary);
+}
+
+.menu-movil-cta {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+}
+
+/* Responsividad */
+@media (max-width: 960px) {
+  .navbar-enlaces,
+  .navbar-accion {
+    display: none;
+  }
+
+  .hamburguesa {
+    display: flex;
+  }
+
+  .menu-movil {
+    display: block;
+  }
+}

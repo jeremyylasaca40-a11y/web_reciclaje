@@ -1,0 +1,12 @@
+.tarjeta-residuo-base {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+}
+
+.tacho-indicador {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}

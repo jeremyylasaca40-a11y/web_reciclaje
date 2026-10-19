@@ -1,0 +1,7 @@
+.pagina-servicios-modulo {
+  padding: 5rem 1.5rem;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
