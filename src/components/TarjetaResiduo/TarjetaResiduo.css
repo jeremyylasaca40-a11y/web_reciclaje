@@ -1,12 +1,196 @@
-.tarjeta-residuo-base {
-  padding: 1.5rem;
-  border-radius: var(--radius-md);
-  background: #ffffff;
+/* Estructura de la tarjeta */
+.residuo-card {
+  --material-color: #245a9b;
+  --material-fondo: #edf4ff;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.75rem;
+
+  background: var(--surface-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
-.tacho-indicador {
-  font-size: 0.75rem;
-  font-weight: 700;
+.residuo-card:hover {
+  border-color: #aacbb9;
+  box-shadow: var(--shadow-md);
+}
+
+/* Colores decorativos para identificar cada material */
+.residuo-card--carton {
+  --material-color: #8a5424;
+  --material-fondo: #fbf1e7;
+}
+
+.residuo-card--plastico {
+  --material-color: #08697e;
+  --material-fondo: #e8f7fa;
+}
+
+.residuo-card--vidrio {
+  --material-color: #386837;
+  --material-fondo: #eef7e9;
+}
+
+.residuo-card--metales {
+  --material-color: #795b13;
+  --material-fondo: #fff8de;
+}
+
+/* Cabecera e icono */
+.residuo-card__cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.residuo-card__icono {
+  display: grid;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+
+  border-radius: 16px;
+  color: var(--material-color);
+  background: var(--material-fondo);
+}
+
+.residuo-card__icono svg {
+  width: 30px;
+  height: 30px;
+}
+
+.residuo-card__etiqueta {
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+
+  background: var(--surface-muted);
   color: var(--primary);
-  margin-bottom: 0.5rem;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Textos */
+.residuo-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.65rem;
+}
+
+.residuo-card__descripcion {
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.residuo-card__subtitulo {
+  font-size: 0.8rem;
+  margin: 1.4rem 0 0.7rem;
+}
+
+/* Lista de ejemplos */
+.residuo-card__ejemplos {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.45rem;
+
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.residuo-card__ejemplos li {
+  padding: 0.3rem 0.6rem;
+
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+/* Botón desplegable */
+.residuo-card__boton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  width: 100%;
+  margin-top: auto;
+  padding: 1rem 0 0;
+
+  border-top: 1px solid var(--border-light);
+  color: var(--primary);
+
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.residuo-card__boton:hover {
+  color: var(--primary-dark);
+}
+
+.residuo-card__boton:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.residuo-card__flecha {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.residuo-card__flecha.abierta {
+  transform: rotate(180deg);
+}
+
+/* Consejos */
+.residuo-card__consejos {
+  margin-top: 1rem;
+  padding: 1rem;
+
+  background: var(--surface-muted);
+  border-radius: var(--radius-sm);
+}
+
+.residuo-card__consejos h4 {
+  font-size: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.residuo-card__consejos p {
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.residuo-card__consejos p + h4 {
+  margin-top: 1rem;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 480px) {
+  .residuo-card {
+    padding: 1.4rem;
+  }
+}
+
+/* Respeta la preferencia de reducir animaciones */
+@media (prefers-reduced-motion: reduce) {
+  .residuo-card,
+  .residuo-card__flecha {
+    transition: none;
+  }
 }
