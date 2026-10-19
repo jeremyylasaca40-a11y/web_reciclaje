@@ -1,43 +1,93 @@
-// ==========================================================
-// ECOLIM S.A.C. - Datos de Residuos Sólidos (Perú)
-// Asignado a: Integrante 2 (Rama: feature/catalogo-residuos)
-// ==========================================================
+// Datos utilizados por el catálogo de residuos de ECOLIM.
+// Los colores de las tarjetas serán decorativos.
 
 export const residuos = [
   {
     id: 1,
-    nombre: 'Papel y Cartón',
+    tipo: 'papel',
+    nombre: 'Papel',
     categoria: 'Aprovechable',
-    colorTacho: 'Azul (NTP 900.058)',
-    descripcion: 'Hojas bond, periódicos, revistas, cajas de cartón corrugado y conos de papel limpios y secos.',
-    ejemplos: ['Hojas de oficina', 'Cajas de embalaje', 'Cuadernos usados', 'Folletos'],
-    comoSegregar: 'Aplanar las cajas para ahorrar espacio, retirar cintas adhesivas y mantener libre de grasa o líquidos.'
+    descripcion:
+      'Dale otra oportunidad al papel que usas para estudiar, trabajar o informarte.',
+    ejemplos: [
+      'Hojas de oficina',
+      'Periódicos',
+      'Revistas',
+      'Cuadernos sin espiral',
+    ],
+    comoSegregar:
+      'Reúne el papel limpio y seco. Separa elementos de plástico o metal y guárdalo lejos de la humedad.',
+    evitar:
+      'No mezcles papel higiénico, servilletas usadas ni papel con restos de comida.',
   },
   {
     id: 2,
-    nombre: 'Plásticos (PET y PEAD)',
+    tipo: 'carton',
+    nombre: 'Cartón',
     categoria: 'Aprovechable',
-    colorTacho: 'Blanco (NTP 900.058)',
-    descripcion: 'Botellas de bebidas, envases de yogurt, champú, detergentes y tapas plásticas limpias.',
-    ejemplos: ['Botellas de agua y gaseosa', 'Envases de limpieza', 'Tapitas plásticas'],
-    comoSegregar: 'Enjuagar brevemente, escurrir, aplastar la botella y colocar su tapa.'
+    descripcion:
+      'Las cajas y los empaques limpios pueden convertirse en nuevos materiales.',
+    ejemplos: [
+      'Cajas de embalaje',
+      'Cajas de cereal',
+      'Tubos de cartón',
+    ],
+    comoSegregar:
+      'Vacía y aplana las cajas. Retira cintas y envolturas plásticas cuando sea posible y conserva el cartón seco.',
+    evitar:
+      'Separa las partes con grasa o restos de alimentos. Los envases multicapa requieren una recolección específica.',
   },
   {
     id: 3,
-    nombre: 'Vidrio',
+    tipo: 'plastico',
+    nombre: 'Plástico',
     categoria: 'Aprovechable',
-    colorTacho: 'Plomo / Gris (NTP 900.058)',
-    descripcion: 'Botellas de bebidas, frascos de conservas, perfumes y alimentos sin roturas peligrosas.',
-    ejemplos: ['Botellas de jugo', 'Frascos de mermelada', 'Botellas de aceite de oliva'],
-    comoSegregar: 'Lavar, secar y retirar tapas de metal o corchos antes de entregarlos.'
+    descripcion:
+      'Empieza por separar tus botellas y envases de uso cotidiano.',
+    ejemplos: [
+      'Botellas de agua',
+      'Botellas de gaseosa',
+      'Envases de champú',
+      'Envases de detergente',
+    ],
+    comoSegregar:
+      'Vacía los envases, retira restos de producto y déjalos escurrir. Consulta qué tipos de plástico recibe tu punto de acopio.',
+    evitar:
+      'No mezcles envases de sustancias peligrosas. No todos los plásticos se reciben en los mismos programas.',
   },
   {
     id: 4,
-    nombre: 'Metales y Latas',
+    tipo: 'vidrio',
+    nombre: 'Vidrio',
     categoria: 'Aprovechable',
-    colorTacho: 'Amarillo (NTP 900.058)',
-    descripcion: 'Latas de leche, conservas de pescado, tapas de metal y latas de aluminio.',
-    ejemplos: ['Latas de atún', 'Latas de leche evaporada', 'Latas de refresco'],
-    comoSegregar: 'Enjuagar para evitar olores y plagas, aplastar si es posible para reducir volumen.'
-  }
+    descripcion:
+      'Separa botellas y frascos para que el vidrio pueda aprovecharse nuevamente.',
+    ejemplos: [
+      'Botellas de bebidas',
+      'Frascos de mermelada',
+      'Frascos de conservas',
+    ],
+    comoSegregar:
+      'Vacía los frascos y botellas, retira restos de alimentos y separa las tapas. Almacénalos con cuidado para evitar roturas.',
+    evitar:
+      'No mezcles cerámica, espejos ni focos con los envases de vidrio. Consulta cómo entregar piezas rotas.',
+  },
+  {
+    id: 5,
+    tipo: 'metales',
+    nombre: 'Metales',
+    categoria: 'Aprovechable',
+    descripcion:
+      'Las latas de aluminio y otros envases metálicos también tienen una segunda vida.',
+    ejemplos: [
+      'Latas de atún',
+      'Latas de leche',
+      'Latas de bebidas',
+      'Tapas metálicas',
+    ],
+    comoSegregar:
+      'Vacía y enjuaga las latas para retirar residuos de alimentos. Déjalas escurrir y evita manipular bordes cortantes.',
+    evitar:
+      'No mezcles pilas, baterías ni aerosoles con las latas de alimentos y bebidas; requieren manejo diferenciado.',
+  },
 ];
