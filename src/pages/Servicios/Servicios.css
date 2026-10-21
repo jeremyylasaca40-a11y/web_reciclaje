@@ -1,7 +1,52 @@
-.pagina-servicios-modulo {
-  padding: 5rem 1.5rem;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.servicios-hero {
+  padding: 5rem 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(132, 204, 22, 0.18), transparent 28rem),
+    var(--surface-muted);
+  text-align: center;
+}
+
+.servicios-hero h1 {
+  max-width: 760px;
+  margin: 1.25rem auto 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.servicios-hero p {
+  max-width: 650px;
+  margin: 0 auto 1.75rem;
+  font-size: 1.05rem;
+}
+
+.servicios-listado {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
+.servicios-encabezado {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.servicios-encabezado h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 600px) {
+  .servicios-hero {
+    padding: 3.5rem 0;
+  }
+
+  .servicios-listado {
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+  }
 }
