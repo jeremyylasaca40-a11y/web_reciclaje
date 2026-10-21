@@ -1,1 +1,10 @@
-/* Estilos específicos de Boton si se requieren */
+.btn-ecolim:focus-visible {
+  outline: 3px solid var(--accent-lime);
+  outline-offset: 3px;
+}
+
+.btn-ecolim:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}

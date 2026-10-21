@@ -1,7 +1,143 @@
-.pagina-solicitud-modulo {
-  padding: 5rem 1.5rem;
-  min-height: 60vh;
+.solicitud-hero {
+  padding: 4rem 0;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(132, 204, 22, 0.18), transparent 28rem),
+    var(--surface-muted);
+  text-align: center;
+}
+
+.solicitud-hero h1 {
+  margin: 1.25rem 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.solicitud-hero p {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.solicitud-contenido {
+  max-width: 920px;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.solicitud-formulario,
+.solicitud-confirmacion {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-md);
+}
+
+.solicitud-formulario-encabezado {
+  margin-bottom: 1.75rem;
+}
+
+.solicitud-formulario-encabezado h2,
+.solicitud-confirmacion h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.solicitud-campos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.solicitud-campo {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: 0.45rem;
+  color: var(--text-main);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.solicitud-campo input,
+.solicitud-campo select,
+.solicitud-campo textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  color: var(--text-main);
+  font: inherit;
+  font-weight: 400;
+}
+
+.solicitud-campo textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.solicitud-campo input:focus,
+.solicitud-campo select:focus,
+.solicitud-campo textarea:focus {
+  border-color: var(--border-focus);
+  outline: 3px solid rgba(16, 185, 129, 0.2);
+}
+
+.solicitud-campo-ancho {
+  grid-column: 1 / -1;
+}
+
+.solicitud-aviso {
+  margin-top: 1.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  font-size: 0.85rem;
+}
+
+.solicitud-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.solicitud-confirmacion {
+  text-align: center;
+}
+
+.solicitud-confirmacion-icono {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--accent-lime-soft);
+  color: var(--primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.solicitud-confirmacion p {
+  max-width: 560px;
+  margin: 0 auto 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .solicitud-hero {
+    padding: 3rem 0;
+  }
+
+  .solicitud-contenido {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+  }
+
+  .solicitud-campos {
+    grid-template-columns: 1fr;
+  }
+
+  .solicitud-campo-ancho {
+    grid-column: auto;
+  }
 }

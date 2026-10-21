@@ -1,5 +1,52 @@
 .tarjeta-servicio-base {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding: 1.5rem;
   border-radius: var(--radius-md);
   background: #ffffff;
+}
+
+.tarjeta-servicio-icono {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-md);
+  background: var(--accent-lime-soft);
+  font-size: 1.8rem;
+}
+
+.tarjeta-servicio-dirigido {
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.tarjeta-servicio-base h2 {
+  font-size: 1.35rem;
+}
+
+.tarjeta-servicio-descripcion {
+  line-height: 1.7;
+}
+
+.tarjeta-servicio-detalle h3 {
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.tarjeta-servicio-detalle p,
+.tarjeta-servicio-detalle li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.tarjeta-servicio-detalle ul {
+  padding-left: 1.2rem;
+}
+
+.tarjeta-servicio-base .btn-ecolim {
+  width: 100%;
+  margin-top: auto;
 }
